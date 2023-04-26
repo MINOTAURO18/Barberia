@@ -42,6 +42,12 @@ html{
       display: grid;
       grid-template-columns: 80% 20%;
 
+     
+
+        .nav_mobile{
+          display: none; 
+        }
+
         .nav_list{
           display: flex;
           justify-content: space-evenly;
@@ -55,12 +61,12 @@ html{
               text-decoration: none;
               font-size: 1.2rem;
               color: $color-letra;
+              transition: all .2s ease-in-out;
 
             }
 
             a:hover{
               color: #BB7D00;
-              transition: all .2s;
             }
         }
 
@@ -80,7 +86,29 @@ html{
               filter: invert(55%) sepia(62%) saturate(4542%) hue-rotate(22deg) brightness(95%) contrast(101%);
             }
         }
+
+
+        @media (max-width: 800px){
+          .redes{
+            display: none;
+          }
+
+        }
     }
+    @media (max-width: 800px){
+      .nav{
+       display: grid;
+       grid-template-columns: initial;
+      }
+    }
+
+    @media (max-width: 600px){
+      .nav{
+        display: none;
+      }
+      
+    }
+
 }
 
 
@@ -186,16 +214,16 @@ html{
       height: 100%;
       margin: auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 50px;
+      gap: 80px;
 
 
       .card{
         background-color: rgb(11, 11, 11);
-        width: 300px;
-        height: 380px;
+        width: 280px;
+        height: 320px;
         padding: 15px;
         border-top: 2px solid #BB7D00;
         border-bottom: 2px solid #BB7D00;
@@ -215,6 +243,7 @@ html{
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 15px;
           }
       }
 
@@ -233,6 +262,7 @@ html{
   height: auto;
   min-height: 100vh;
   margin: auto;
+  padding: 4vh 0;
   
 
    .barberos{
@@ -258,6 +288,7 @@ html{
       justify-content: center;
       align-items: center;
     }
+    
 
      .experiencia{
       width: 400px;
@@ -290,8 +321,24 @@ html{
           color: $color-letra;
           font-weight: 200;
          }
+         @media (max-width: 700px){
+          h3,h4{
+            font-size: 12px;
+           }
+
+           h2{
+            font-size: 18px;
+           }
+         }
        }
 
+
+     }
+     @media (max-width: 700px){
+      .experiencia{
+        width: 300px;
+        height: 300px;
+      }
      }
 
      .cuadrado{
@@ -307,6 +354,11 @@ html{
         height: 200px;
        }
 
+       .uno:hover{
+        background-color:$color-letra;
+        transition: all .2s ease-in-out;
+       }
+
        .dos{
         background-image: url(../images/barbero1.webp);
         background-position: center center;
@@ -316,6 +368,7 @@ html{
          width: 200px;
          height: 200px;
        }
+
 
        .tres{
         background-image: url(../images/barbero2.webp);
@@ -335,8 +388,43 @@ html{
         width: 200px;
         height: 200px;
        }
-     }
+       .cuatro:hover{
+        background-color:$color-letra;
+        transition: all .2s ease-in-out;
+       }
+      }
+      @media (max-width: 700px){
+       .cuadrado{
+         width: 300px;
+         height: 300px;
+
+         .uno{
+          width: 150px;
+          height: 150px;
+         }
+  
+         .dos{
+           width: 150px;
+           height: 150px;
+         }
+  
+         .tres{
+          width: 150px;
+          height: 150px;
+         } 
+  
+        .cuatro{
+          width: 150px;
+          height: 150px;
+         }
+       }
+      }
    }
+}
+@media (max-width: 700px){
+  .section-three{
+    padding: 10vh 0;
+  }
 }
 
 
@@ -391,7 +479,7 @@ html{
     z-index: 1;
  }
  #overflow {
-    width: 100%;
+    width: 100%; 
     overflow: hidden;
  }
  #slide1:checked ~ #slides .inner {
