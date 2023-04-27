@@ -37,8 +37,33 @@ html {
   display: grid;
   grid-template-columns: 80% 20%;
 }
+.header .nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .header .nav .nav_mobile {
   display: none;
+}
+@media (max-width: 800px) {
+  .header .nav .nav_mobile {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .nav .nav_mobile .redes_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .header .nav .nav_mobile img {
+    width: 25px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(190deg) brightness(104%) contrast(101%);
+  }
 }
 .header .nav .nav_list {
   display: flex;
@@ -56,6 +81,11 @@ html {
 }
 .header .nav .nav_list a:hover {
   color: #BB7D00;
+}
+@media (max-width: 800px) {
+  .header .nav .nav_list {
+    display: none;
+  }
 }
 .header .nav .redes {
   width: 22px;
@@ -82,9 +112,7 @@ html {
     display: grid;
     grid-template-columns: initial;
   }
-}
-@media (max-width: 600px) {
-  .header .nav {
+  .header .redes {
     display: none;
   }
 }
@@ -200,7 +228,6 @@ html {
 }
 
 .section-three {
-  width: 70%;
   height: auto;
   min-height: 100vh;
   margin: auto;
@@ -212,7 +239,7 @@ html {
   min-height: 100vh;
   display: grid;
   gap: 5rem;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 }
 .section-three .barberos .contain-experiencia {
   width: 100%;
